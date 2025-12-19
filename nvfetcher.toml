@@ -1,0 +1,4 @@
+[tableplus]
+src.webpage = "https://deb.tableplus.com/debian/24/dists/tableplus/main/binary-amd64/Packages"
+src.regex = "Version: ([0-9.]+)"
+fetch.url = "https://deb.tableplus.com/debian/24/pool/main/t/tableplus/tableplus_$ver_amd64.deb"

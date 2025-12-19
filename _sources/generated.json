@@ -1,0 +1,17 @@
+{
+    "tableplus": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "tableplus",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "name": null,
+            "sha256": "sha256-wQm0uCGtj5aqAeNH8bI2EsH4MRDOhZyuB04n++rnaQY=",
+            "type": "url",
+            "url": "https://deb.tableplus.com/debian/24/pool/main/t/tableplus/tableplus_0.1.284_amd64.deb"
+        },
+        "version": "0.1.284"
+    }
+}
