@@ -74,20 +74,19 @@ stdenv.mkDerivation rec {
   installPhase = ''
     runHook preInstall
 
-    mkdir -p $out/bin $out/lib $out/share/applications
+    mkdir -p $out/bin $out/lib $out/share/applications $out/share/pixmaps
 
-    # Install main application
     cp -r opt/tableplus/* $out/lib/
 
-    # Create wrapper script
+    ln -s $out/lib/resource/image/logo.png $out/share/pixmaps/tableplus.png
+
     makeWrapper $out/lib/tableplus $out/bin/tableplus \
       --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath buildInputs}"
 
-    # Install desktop file
     cp $out/lib/tableplus.desktop $out/share/applications/
     substituteInPlace $out/share/applications/tableplus.desktop \
       --replace-fail "/usr/local/bin/tableplus" "$out/bin/tableplus" \
-      --replace-fail "/opt/tableplus/resource/image/logo.png" "$out/lib/resource/image/logo.png"
+      --replace-fail "/opt/tableplus/resource/image/logo.png" "tableplus"
 
     runHook postInstall
   '';
