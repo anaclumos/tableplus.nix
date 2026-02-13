@@ -3,10 +3,10 @@
 {
   tableplus = {
     pname = "tableplus";
-    version = "0.1.284";
+    version = "0.1.286";
     src = fetchurl {
-      url = "https://deb.tableplus.com/debian/24/pool/main/t/tableplus/tableplus_0.1.284_amd64.deb";
-      sha256 = "sha256-wQm0uCGtj5aqAeNH8bI2EsH4MRDOhZyuB04n++rnaQY=";
+      url = "https://deb.tableplus.com/debian/24/pool/main/t/tableplus/tableplus_0.1.286_amd64.deb";
+      sha256 = "sha256-3WeE7z+2gBygErf01a+OjELurRugzLiYDJFTNG8QKc8=";
     };
   };
 }
